@@ -41,11 +41,10 @@ def printUsage():
 
     OUTPUT
 
-         residence time with the standard deviation computed for each input_file and an image with histogram representation of the bootstrapping output​    OPTIONS
-         -trj   - use trajectory/trajectories from the files given as [parametes] (parameters - PDB (or compressed pdb , *.pdb.gz) file name (names)) 
+         residence time with the standard deviation computed for each input_file and an image with histogram representation of the bootstrapping output
     ''')
     
-
+def bootstrapp(t, rounds=50000):
     max_shuffle = rounds
     alpha = 0.8
     sub_set = int(alpha*len(t))
@@ -88,20 +87,26 @@ for t,d in enumerate(d_list):
 #    print(times)
     times = np.asarray(times)/500000.
     times_set.append(times)
-    print("************ Dissociation times *****************")
+    print("************ Dissociation times for "+d+" ****************")
     print(times)
 
 
-fig  = plt.figure(figsize = (2*len(d_list), 5))
-gs = gridspec.GridSpec(nrows=2, ncols=len(d_list), wspace=0.1,hspace=0.6)
+fig  = plt.figure(figsize = (2*len(d_list), 7))
+gs = gridspec.GridSpec(nrows=3, ncols=len(d_list), wspace=0.1,hspace=0.6)
 mue_set = []   
 for t, times in enumerate(times_set):
 #--- do bootstrapping ----
     if len(times) > 0: 
+        ax0 = fig.add_subplot(gs[0, t])
+        ax0.hist(times,bins=int(len(times)/2),cumulative=True,histtype="step",color='k',lw=1)
+        plt.title("raw CDF",fontsize=12)
+        ax0.set_xlabel('dissociation time [ns]', fontsize=10)
+        ax0.plot([min(times), max(times)],[len(times)/2.0,len(times)/2.0], color='red', alpha = 0.5)
+        if (t> 0): ax0.set_yticklabels( [])
         bt2 = bootstrapp(times, rounds=50000)
 #--- make a plot------
         bins = 6
-        ax1 = fig.add_subplot(gs[0, t])
+        ax1 = fig.add_subplot(gs[1, t])
         ax1.hist(x=bt2,bins=bins, alpha=0.8,density=True,histtype="step")
         mu, std = norm.fit(bt2)
         mue_set.append(np.round(mu,1))
@@ -113,15 +118,15 @@ for t, times in enumerate(times_set):
         ax1.plot(x, p, 'k', linewidth=2)
         ax1.plot([mu,mu],[0, max(p)], color='red', alpha = 0.5)
         ax1.plot([xmin, xmax],[max(p)/2.0,max(p)/2.0], color='red', alpha = 0.5)
-        ax1.plot([xmin, mu],[max(p),max(p)], color='red', linestyle='dashed',alpha = 0.5)        
-        ax1.set_xlabel('residence time [ns]', fontsize=10)
+        ax1.plot([0.8*xmin, mu],[max(p),max(p)], color='red', linestyle='dashed',alpha = 0.5)        
+        ax1.set_xlabel('res. time [ns]', fontsize=10)
         plt.title("tau distribution",fontsize=12)
         ax1.set_yticks([])
 
-        ax2 = fig.add_subplot(gs[1, t])
+        ax2 = fig.add_subplot(gs[2, t])
         xmin = min(times)
         xmax = np.round(max(times))
-        tp = np.linspace(xmin,xmax*1.5,100)
+        tp = np.linspace(xmin*0.5,xmax*1.5,100)
         poisson = 1-np.exp(-tp/mu) #np.cumsum(1-np.exp(-np.linspace(xmin,xmax,10)/mu))
         points=len(times)
         bins = len(times)
@@ -130,18 +135,26 @@ for t, times in enumerate(times_set):
         hist_center = []
         for i,b in enumerate(bin_edges):
             if i > 0: hist_center.append((bin_edges[i-1]+bin_edges[i])/2.0)
-        ax2.scatter(np.log10(np.asarray(hist_center)),np.cumsum(hist)/np.max(np.cumsum(hist)),marker='o')
-        ax2.set_xlabel('log(residence time [ns])', fontsize=10)
+        CD = np.cumsum(hist)/np.max(np.cumsum(hist))
+        ax2.scatter(np.log10(np.asarray(hist_center)),CD,marker='o')
+        ax2.set_xlabel('log(res. time [ns])', fontsize=10)
         ax2.plot(np.log10(tp),poisson,color = 'k')
         ax2.set_ylim(0,1)
-        ax2.set_xlim(-1,1.5)
+        ax2.set_xlim(-1.5,1.5)
      #   ax2.set_xlim(np.round(np.log10(np.asarray(hist_center))[0],1)-0.1,np.log10(xmax*1.5)) #max(np.log10(np.asarray(hist_center))[-1],np.log10(tp)[-1]))
         ax2.set_yticks(np.linspace(0,1,5))
         if (t> 0): ax2.set_yticklabels( [])
         plt.grid(linestyle = '--',linewidth=0.5)
-        plt.title("KS test",fontsize=12)
         ax2.plot([np.log10(mu),np.log10(mu)],[0, 1], color='red', alpha = 0.5)
-        print(" Relative residence time and SD: ",np.round(mu,2), np.round(std,2))
+       # p_mu = 1-np.exp(-1.0)
+       # cd_mu = np.argwhere(np.asarray(hist_center)> p_mu)[0][0]
+       # if cd_mu > 1:
+       #     ks = abs(p_mu - (CD[cd_mu]+CD[cd_mu-1])/2)
+       # else:
+       #     ks = abs(p_mu - CD[cd_mu])
+        KS = np.round(np.max(np.abs(1-np.exp(-(np.asarray(hist_center))/mu) - CD)),2)
+        plt.title("KS test:"+str(KS),fontsize=12)
+        print(" Relative res. time and SD: ",np.round(mu,2), np.round(std,2),"KS test:",KS)
         print("-----------------------------------------------------------------")
 
 
