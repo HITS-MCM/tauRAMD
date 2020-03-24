@@ -20,7 +20,7 @@ A workflow for generation and analysis Protein-Ligand Interaction Fingerprints f
 
 This open source software code was developed in part in the Human Brain Project, funded from the European Union’s Horizon 2020 Framework Programme for Research and Innovation under Specific Grant Agreements  No. 785907 (Human Brain Project  SGA2).
 
-Packages required:
+    Packages required:
     Python 3.x
     numpy;    pandas;  matplotlib;  MDAnalysis;  RDkit;   scipy
     code is written on Python 3.x and tested on Python 3.7
