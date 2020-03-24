@@ -30,25 +30,27 @@ This open source software code was developed in part in the Human Brain Project,
 
 
 1. Scripts:
-     Clustering.py   - containes functions for analysis of trajectories using IFP data
-     IFP_generation.py  - contains functions for generation of IFPs
-     Membrane_analysis.py
-     Trajectories.py  - contains functions for building a trajectory object for reading and analysis standard MD and RAMD trajectories and computation of relative residence times
+
+    Clustering.py   - containes functions for analysis of trajectories using IFP data   
+    IFP_generation.py  - contains functions for generation of IFPs
+    Membrane_analysis.py
+    Trajectories.py  - contains functions for building a trajectory object for reading and analysis standard MD and RAMD trajectories and computation of relative residence times
 
 2. Data:
+
         2YKI
         4MQT
         6EI5
         
 3. Example jupyter notebooks :
-  (i)jupyter notebook IFP_generation_examples_PDB.ipynb: an examples of Protein-Ligand IFP computations
-    Computing interaction fingerprints (IFP) for
-     --- a single structure prepared for MD simulations (HSP90; PDB ID 6EI5, dcd format)
-     --- a trajectory (for selected frames; dcd format)
-     --- PDB structure
-    Visualizing protein residues that are involved in protein-ligand interactions, including water-bridges
-  (ii)jupyter notebook IFP_generation_example_TRAJ.ipynb: example of generation and analysis of Ligand-Protein IFPs for RAMD simulations (dcd trajectories)
-     Computing interaction fingerprints (IFP) for
-     --- system equilibration trajectory
-     --- ligand dissociation trajectories
-     Visualizion of protein residues that are involved in protein-ligand interactions, including water-bridges ligand dissociation
+
+         (i)jupyter notebook IFP_generation_examples_PDB.ipynb: an examples of Protein-Ligand IFP computations
+        Computing interaction fingerprints (IFP) for
+        --- a single structure prepared for MD simulations (HSP90; PDB ID 6EI5, dcd format)
+        --- a trajectory (for selected frames; dcd format)
+        --- a PDB structure
+
+        (ii)jupyter notebook IFP_generation_example_TRAJ.ipynb: example of generation and analysis of Ligand-Protein IFPs for RAMD simulations (dcd trajectories)
+        Computing interaction fingerprints (IFP) for
+        --- system equilibration trajectory
+        --- ligand dissociation trajectories
