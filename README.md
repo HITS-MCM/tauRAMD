@@ -4,7 +4,7 @@
     Released under the GNU Public Licence, v2 or any higher version
     
 Script for computation of drug-target relative residence times from Random Acceleration Molecular Dynamics (RAMD)simulations.
-It also helps to make statistical analysis of the results. 
+It also provides statistical analysis of the results. 
 
     Author: Daria Kokh
 
