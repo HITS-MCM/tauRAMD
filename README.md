@@ -3,8 +3,8 @@
     Copyright (c) 2019
     Released under the GNU Public Licence, v2 or any higher version
     
-Script for computation of the drug-target relative residence times from RAMD simulations:
-this script helps to analyse results of Random Acceleration Molecular Dynamics (RAMD) simulatiuons to estimate relative residence time of a protein-ligand complex. 
+Script for computation of drug-target relative residence times from Random Acceleration Molecular Dynamics (RAMD)simulations.
+It also helps to make statistical analysis of the results. 
 
     Author: Daria Kokh
 
