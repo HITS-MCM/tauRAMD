@@ -4,7 +4,9 @@ Python scripts computations of relative protein-ligand residence times using tau
 Author: Daria Kokh
 
 Heidelberg Institute of Theoretical Studies (HITS, www.h-its.org)
+
 Schloss-Wolfsbrunnenweg 35
+
 69118 Heidelberg, Germany
 
 _This open source software code was developed in part in the Human Brain Project, funded from the European Union’s Horizon 2020  Framework Programme for Research and Innovation under Specific Grant Agreements  No. 785907 (Human Brain Project  SGA2)._
