@@ -1,0 +1,33 @@
+###################
+script for swapping out ligand in the pre-equilibrated protein-ligand system
+>>>>>Requirements:
+
+Python packages:
+	ParmEd
+        MDAnalysis
+Amber 14
+
+>>>> Input
+
+the following lines of run.sh  must be adapted:
+
+Structure='Ligands1/RdRp-INVG-1981.pdb'   - a structure with a ligand docked
+Ligan_frcmod='Ligands1/I19_resp.frcmod'   - ligand parameters
+Ligand_mol2='Ligands1/I19_resp.mol2'      - ligand mol2
+Ligand_resi_name='I19'
+
+
+# MD parameters
+MD_prmtop='MD/input.prmtop'              - MD topology file
+MD_rst7='MD/equil.rst7'                  - MD coordinate file
+MD_resi_name='A20'                       - residue name of the ligand to be replaced by a new ligand
+
+
+>>>>> Run:
+./run.sh
+
+>>>>Output:
+
+xxx_BOX.prmtop - topology file
+xxx.rst7  - cordinate file
+

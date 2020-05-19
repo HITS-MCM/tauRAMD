@@ -1,0 +1,10 @@
+source /hits/fast/mcm/app/amber/amber14-intel/dat/leap/cmd/leaprc.ff14SB
+source /hits/fast/mcm/app/amber/amber14-intel/dat/leap/cmd/leaprc.gaff
+INH = loadmol2 Ligand_superimposed.mol2
+check INH
+loadamberparams INH.frcmod
+saveoff INH INH.lib
+saveamberparm INH INH.prmtop INH.inpcrd
+savepdb INH INH.pdb
+charge INH
+quit

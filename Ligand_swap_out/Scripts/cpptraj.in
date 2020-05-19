@@ -1,0 +1,5 @@
+parm MD.prmtop
+trajin MD.rst7
+trajout MD.pdb
+run
+
