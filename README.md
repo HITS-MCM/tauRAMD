@@ -1,5 +1,5 @@
 # tauRAMD
-Python scripts computations of relative protein-ligand residence times using tauRAMD (Random Acceleration Molecular Dynamics)
+**Python scripts for computations of relative protein-ligand residence times using tauRAMD (Random Acceleration Molecular Dynamics)**
 
 Author: Daria Kokh
 
