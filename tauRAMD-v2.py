@@ -21,6 +21,7 @@ import  pylab as plt
 import seaborn as sns
 import numpy as np
 from scipy.stats import norm
+import sys
 
 
 soft = "Gr"    #   if Gromacs software was used for RAMD simulations;  otherwise define  soft = 'NAMD' 
@@ -80,10 +81,15 @@ for t,d in enumerate(d_list):
         read_data = f.readlines()
     times = []
     for r in read_data:
-        if soft == "NAMD":
-            times.append(int(r[r.find("EXIT:")+6:r.find(">")-2]))   # if NAMD  was used to generate RAMD trajectories
-        else:
-            times.append(int(r[r.find("after")+6:r.find("steps")-1]))   # if Gromacs was used to generate RAMD trajectories
+        try:
+            if soft == "NAMD":
+                times.append(int(r[r.find("EXIT:")+6:r.find(">")-2]))   # if NAMD  was used to generate RAMD trajectories
+            else:
+                times.append(int(r[r.find("after")+6:r.find("steps")-1]))   # if Gromacs was used to generate RAMD trajectories
+        except:
+            print("Input files dont't have correct format")
+            printUsage()
+            sys.exit()
 #    print(times)
     times = np.asarray(times)/500000.
     times_set.append(times)
