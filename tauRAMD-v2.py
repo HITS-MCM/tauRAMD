@@ -36,9 +36,11 @@ def printUsage():
 
           python tauRAMD-v1.py  input_file[s]
 
-          input files must contain a set of lines extracted from the gromacs output. Each line contains the number of steps executed before dissociation 
+          input files must contain a set of lines extracted from the gromacs (or NAMD) output. Each line contains the number of steps executed before dissociation 
 
-          and has the following format: “XX/YYYY.out:==== RAMD ==== GROMACS will be stopped after 874650 steps.”
+          and has the following format:
+          for Gromacs:   “XX/YYYY.out:==== RAMD ==== GROMACS will be stopped after 874650 steps.”   
+          for NAMD:      "EXIT: XXXXXXX  > LIGAND EXIT EVENT DETECTED"
 
     OUTPUT
 
