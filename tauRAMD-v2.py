@@ -100,9 +100,12 @@ for t,d in enumerate(d_list):
 fig  = plt.figure(figsize = (2*len(d_list), 7))
 gs = gridspec.GridSpec(nrows=3, ncols=len(d_list), wspace=0.1,hspace=0.6)
 mue_set = []   
+print("\n ==============   Bootstrapping and computation of tau for each replica==================\n")
 for t, times in enumerate(times_set):
 #--- do bootstrapping ----
-    if len(times) > 0: 
+    if len(times) > 8:
+        for ti in range(len(times),15): times = np.concatenate((times,[55.0]))
+        print(times)
         ax0 = fig.add_subplot(gs[0, t])
         ax0.hist(times,bins=int(len(times)/2),cumulative=True,histtype="step",color='k',lw=1)
         plt.title("raw CDF",fontsize=12)
@@ -176,8 +179,8 @@ plt.ylim=(0,ymax)
 plt.grid(linestyle = '--',linewidth=0.5)
 plt.yticks(np.linspace(0,int(ymax),min(int(ymax)+1,11)), fontsize=9)
 plt.ylabel('residence time [ns]', fontsize=10)
-plt.title("Residence times for "+str(t)+" replicas, mean: "+str(np.round(np.mean(mue_set),2))+"  std: "+str(np.round(np.std(mue_set),2)),fontsize=10)
+plt.title("Residence times for "+str(t+1)+" replicas, mean: "+str(np.round(np.mean(mue_set),2))+"  std: "+str(np.round(np.std(mue_set),2)),fontsize=10)
 plt.savefig('res_times_summary.png', bbox_inches='tight',dpi=300)
-
+print("Residence times for "+str(t+1)+" replicas, mean: "+str(np.round(np.mean(mue_set),2))+"  std: "+str(np.round(np.std(mue_set),2)))
 
 
