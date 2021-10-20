@@ -55,6 +55,5 @@ It also provides statistical analysis of the results.
 
     residence time with the standard deviation computed for each input_file and an 
     images with representation of the bootstrapping output and statistics
-    ''')
     
 
