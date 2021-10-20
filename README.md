@@ -21,12 +21,17 @@ A set of scripts that helps to swap out ligands in a protein-ligand complex
 Script for computation of drug-target relative residence times from Random Acceleration Molecular Dynamics (RAMD)simulations.
 It also provides statistical analysis of the results. 
     
-    PREREQUISITE:
+## Prerequisite
+
     1. Multiple (at least 10) RAMD dossociation trajectories must be generated using 
        either Gromacs or NAMD software.
        In the later case script must be modified a bit:  
           soft = "Gr" must be changed to 
           soft = "NAMD"
+A tutorial to run RAMD using Gromacs or NAMD can be found at <a href="https://kbbox.h-its.org">https://kbbox.h-its.org</a>.
+    For <a href="https://kbbox.h-its.org/toolbox/tutorials/estimation-of-relative-residence-times-of-protein-ligand-complexes-using-random-acceleration-molecular-dynamics-ramd-implementation-in-namd/">Gromacs</a>
+    For <a href="https://kbbox.h-its.org/toolbox/tutorials/estimation-of-relative-residence-times-of-protein-ligand-complexes-using-random-acceleration-molecular-dynamics-ramd-implementation-in-namd/">NAMD</a>
+
     2. Lines of the output files where ligand dissociation is reported
          for Gromacs: 
              “XX/YYYY.out:==== RAMD ==== GROMACS will be stopped after xxxxx steps.”
