@@ -11,9 +11,7 @@
 ## Acknowledgement
 EU Human Brain Project (SGA1 and SGA2): This open source software was developed in part in the Human Brain Project funded from the European Union's Horizon 2020 Framework Programme for Research and Innovation under Specific Grant Agreements No 720270 and No. 78907 (Human Brain Project SGA1 and SGA2).
 
-<img src="images/ebrains.jpg" height="60px">
-<img src="images/hbp.jpg" height="60px">
-<img src="images/eu.jpg" height="60px">
+<a href="https://www.ebrains.eu/"><img src="images/ebrains.jpg" height="60px"></a><a href="https://www.ebrains.eu/"><img src="images/hbp.jpg" height="60px"></a><a href="http://ec.europa.eu/programmes/horizon2020/en/h2020-section/fet-flagships"><img src="images/eu.jpg" height="60px"></a>
 
 ## Ligand_swap_out
 A set of scripts that helps to swap out ligands in a protein-ligand complex
