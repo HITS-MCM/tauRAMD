@@ -23,8 +23,9 @@ It also provides statistical analysis of the results.
     
 ## Prerequisite
 
-    For <a href="https://kbbox.h-its.org/toolbox/tutorials/estimation-of-relative-residence-times-of-protein-ligand-complexes-using-random-acceleration-molecular-dynamics-ramd-implementation-in-namd/">Gromacs</a>
-    For <a href="https://kbbox.h-its.org/toolbox/tutorials/estimation-of-relative-residence-times-of-protein-ligand-complexes-using-random-acceleration-molecular-dynamics-ramd-implementation-in-namd/">NAMD</a>
+For <a href="https://kbbox.h-its.org/toolbox/tutorials/estimation-of-relative-residence-times-of-protein-ligand-complexes-using-random-acceleration-molecular-dynamics-ramd-implementation-in-namd/">Gromacs</a>
+
+For <a href="https://kbbox.h-its.org/toolbox/tutorials/estimation-of-relative-residence-times-of-protein-ligand-complexes-using-random-acceleration-molecular-dynamics-ramd-implementation-in-namd/">NAMD</a>
 
     1. Multiple (at least 10) RAMD dossociation trajectories must be generated using 
        either Gromacs or NAMD software.
