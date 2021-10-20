@@ -9,7 +9,10 @@ Schloss-Wolfsbrunnenweg 35
 
 69118 Heidelberg, Germany
 
-_This open source software code was developed in part in the Human Brain Project, funded from the European Union’s Horizon 2020  Framework Programme for Research and Innovation under Specific Grant Agreements  No. 785907 (Human Brain Project  SGA2)._
+## Acknowledgement
+EU Human Brain Project (SGA1 and SGA2): This open source software was developed in part in the Human Brain Project funded from the European Union's Horizon 2020 Framework Programme for Research and Innovation under Specific Grant Agreements No 720270 and No. 78907 (Human Brain Project SGA1 and SGA2).
+![EBrains](images/ebrains.jpg?raw=true "EBrains")
+
 
 ## Ligand_swap_out
 A set of scripts that helps to swap out ligands in a protein-ligand complex
