@@ -1,17 +1,20 @@
 # tauRAMD
 **A collection of Python scripts for computations of relative protein-ligand residence times using tauRAMD (Random Acceleration Molecular Dynamics)**
 
-Author: Daria Kokh
+    Author: Daria Kokh
+    Heidelberg Institute of Theoretical Studies (HITS, www.h-its.org)
+    Schloss-Wolfsbrunnenweg 35
+    69118 Heidelberg, Germany
 
-Heidelberg Institute of Theoretical Studies (HITS, www.h-its.org)
-
-Schloss-Wolfsbrunnenweg 35
-
-69118 Heidelberg, Germany
+    Contact: mcmsoft(at)h-its.org
 
 ## Acknowledgement
 EU Human Brain Project (SGA1 and SGA2): This open source software was developed in part in the Human Brain Project funded from the European Union's Horizon 2020 Framework Programme for Research and Innovation under Specific Grant Agreements No 720270 and No. 78907 (Human Brain Project SGA1 and SGA2).
+
 ![EBrains](images/ebrains.jpg?raw=true "EBrains")
+![HBP](images/hbp.jpg?raw=true "HBP")
+![EU](images/eu.jpg?raw=true "EU")
+
 
 
 ## Ligand_swap_out
