@@ -23,14 +23,14 @@ It also provides statistical analysis of the results.
     
 ## Prerequisite
 
+    For <a href="https://kbbox.h-its.org/toolbox/tutorials/estimation-of-relative-residence-times-of-protein-ligand-complexes-using-random-acceleration-molecular-dynamics-ramd-implementation-in-namd/">Gromacs</a>
+    For <a href="https://kbbox.h-its.org/toolbox/tutorials/estimation-of-relative-residence-times-of-protein-ligand-complexes-using-random-acceleration-molecular-dynamics-ramd-implementation-in-namd/">NAMD</a>
+
     1. Multiple (at least 10) RAMD dossociation trajectories must be generated using 
        either Gromacs or NAMD software.
        In the later case script must be modified a bit:  
           soft = "Gr" must be changed to 
           soft = "NAMD"
-A tutorial to run RAMD using Gromacs or NAMD can be found at <a href="https://kbbox.h-its.org">https://kbbox.h-its.org</a>.
-    For <a href="https://kbbox.h-its.org/toolbox/tutorials/estimation-of-relative-residence-times-of-protein-ligand-complexes-using-random-acceleration-molecular-dynamics-ramd-implementation-in-namd/">Gromacs</a>
-    For <a href="https://kbbox.h-its.org/toolbox/tutorials/estimation-of-relative-residence-times-of-protein-ligand-complexes-using-random-acceleration-molecular-dynamics-ramd-implementation-in-namd/">NAMD</a>
 
     2. Lines of the output files where ligand dissociation is reported
          for Gromacs: 
@@ -40,7 +40,8 @@ A tutorial to run RAMD using Gromacs or NAMD can be found at <a href="https://kb
     must ge collected in a single file or in multiple files (if trajectories were started 
     from different input coordinate and velocities files) 
 
-    USAGE:
+## Usage
+
     tauRAMD-v1.py  input_file[s]
 
     input files must contain a set of lines extracted from the gromacs output. 
@@ -50,7 +51,8 @@ A tutorial to run RAMD using Gromacs or NAMD can be found at <a href="https://kb
     or if RAMD simulations were done using NAMD software: 
             "EXIT: 462950  > LIGAND EXIT EVENT DETECTED: STOP SIMULATION"
 
-    OUTPUT:
+##Output
+
     residence time with the standard deviation computed for each input_file and an 
     images with representation of the bootstrapping output and statistics
     ''')
