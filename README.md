@@ -51,7 +51,7 @@ It also provides statistical analysis of the results.
     or if RAMD simulations were done using NAMD software: 
             "EXIT: 462950  > LIGAND EXIT EVENT DETECTED: STOP SIMULATION"
 
-##Output
+## Output
 
     residence time with the standard deviation computed for each input_file and an 
     images with representation of the bootstrapping output and statistics
