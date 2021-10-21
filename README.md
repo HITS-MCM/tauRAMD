@@ -45,7 +45,7 @@ For <a href="https://kbbox.h-its.org/toolbox/tutorials/estimation-of-relative-re
 
 ## Usage
 
-    tauRAMD-v1.py  input_file[s]
+    tauRAMD.py  input_file[s]
 
     input files must contain a set of lines extracted from the gromacs output. 
     Each line contains the number of steps executed before dissociation 
