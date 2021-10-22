@@ -30,11 +30,11 @@ def printUsage():
     print ('''\
     NAME
 
-         tauRAMD-v1.py     - computation of residence times using bootstrapping from RAMD output generated in Gromacs
+         tauRAMD.py     - computation of residence times using bootstrapping from RAMD output generated in Gromacs
 
     USAGE
 
-          python tauRAMD-v1.py  input_file[s]
+          python tauRAMD.py  input_file[s]
 
           input files must contain a set of lines extracted from the gromacs (or NAMD) output. Each line contains the number of steps executed before dissociation 
 

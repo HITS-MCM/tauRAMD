@@ -16,7 +16,7 @@ EU Human Brain Project (SGA1 and SGA2): This open source software was developed 
 ## Ligand_swap_out
 A set of scripts that helps to swap out ligands in a protein-ligand complex
 
-## tauRAMD-v2.py
+## tauRAMD.py
  
 Script for computation of drug-target relative residence times from Random Acceleration Molecular Dynamics (RAMD)simulations.
 It also provides statistical analysis of the results. 
