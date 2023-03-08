@@ -43,7 +43,7 @@ For [NAMD tutorial](https://kbbox.h-its.org/toolbox/tutorials/estimation-of-rela
     must ge collected in a single file or in multiple files (if trajectories were started 
     from different input coordinate and velocities files) 
 
-In addition for the analysis of the interaction fingerprints the following software is required [MD-IFP](https://github.com/HITS-MCM/MD-IFP). Please have a look in the [MD-IFP examples](https://github.com/HITS-MCM/MD-IFP/tree/master/examples) section for a jupyter notebook that can be run on google colab and one that can be run on [ebrains](), both require an account at the respective provider.
+In addition for the analysis of the interaction fingerprints the following software is required [MD-IFP](https://github.com/HITS-MCM/MD-IFP). Please have a look in the [MD-IFP examples](https://github.com/HITS-MCM/MD-IFP/tree/master/examples) section for a jupyter notebook that can be run on google colab and one that can be run on [ebrains](https://wiki.ebrains.eu/bin/view/Main/), both require an account at the respective provider.
 
 ## Usage
 
