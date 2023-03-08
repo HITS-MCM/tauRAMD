@@ -25,7 +25,7 @@ It also provides statistical analysis of the results.
 
 To use this script, one has to generate RAMD trajectories. These can be done using GROMACS or NAMD. Tutorials on how to do this can be found below:
 
-For [GROMACS tutorial](https://kbbox.h-its.org/toolbox/tutorials/estimation-of-relative-residence-times-of-protein-ligand-complexes-using-random-acceleration-molecular-dynamics-ramd-implementation-in-gromacs/), (please use this GROMACS version [200~/gromacs-ramd](https://github.com/HITS-MCM/gromacs-ramd.)
+For [GROMACS tutorial](https://kbbox.h-its.org/toolbox/tutorials/estimation-of-relative-residence-times-of-protein-ligand-complexes-using-random-acceleration-molecular-dynamics-ramd-implementation-in-gromacs/), (please use this GROMACS version [gromacs-ramd](https://github.com/HITS-MCM/gromacs-ramd).)
 
 For [NAMD tutorial](https://kbbox.h-its.org/toolbox/tutorials/estimation-of-relative-residence-times-of-protein-ligand-complexes-using-random-acceleration-molecular-dynamics-ramd-implementation-in-namd)
 
