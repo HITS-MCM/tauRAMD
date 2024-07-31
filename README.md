@@ -27,7 +27,8 @@ To use this script, one has to generate RAMD trajectories. These can be done usi
 
 For [GROMACS tutorial](https://kbbox.h-its.org/toolbox/tutorials/estimation-of-relative-residence-times-of-protein-ligand-complexes-using-random-acceleration-molecular-dynamics-ramd-implementation-in-gromacs/), (please use this GROMACS version [gromacs-ramd](https://github.com/HITS-MCM/gromacs-ramd).)
 
-For [NAMD tutorial](https://kbbox.h-its.org/toolbox/tutorials/estimation-of-relative-residence-times-of-protein-ligand-complexes-using-random-acceleration-molecular-dynamics-ramd-implementation-in-namd)
+For [NAMD tutorial](https://kbbox.h-its.org/toolbox/tutorials/estimation-of-relative-residence-times-of-protein-ligand-complexes-using-random-acceleration-molecular-dynamics-ramd-implementation-in-namd/)
+
 
     1. Multiple (at least 10) RAMD dossociation trajectories must be generated using 
        either Gromacs or NAMD software.
