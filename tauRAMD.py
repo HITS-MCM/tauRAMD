@@ -22,6 +22,7 @@ import seaborn as sns
 import numpy as np
 from scipy.stats import norm
 import sys
+import os
 
 
 soft = "Gr"    #   if Gromacs software was used for RAMD simulations;  otherwise define  soft = 'NAMD' 
